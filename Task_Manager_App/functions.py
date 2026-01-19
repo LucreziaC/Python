@@ -1,4 +1,6 @@
-def get_todos(filepath="todos.txt"):
+FILEPATH = "todos.txt"
+
+def get_todos(filepath=FILEPATH):
     """read a text file and return the list of to-do items
     Args:
         filepath (str, optional): _description_. Defaults to "todos.txt".

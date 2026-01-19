@@ -1,5 +1,2 @@
-todo1
-todo2
-test1
-test2
-test optimize
+write todo with GUI
+test todo with GUI
