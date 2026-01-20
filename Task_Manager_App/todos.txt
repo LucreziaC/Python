@@ -1,2 +1,4 @@
 write todo with GUI
-test todo with GUI
+edit 2 todo with gui
+edit new todo
+
