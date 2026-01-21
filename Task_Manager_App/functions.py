@@ -1,4 +1,8 @@
-FILEPATH = "todos.txt"
+import os
+import sys
+
+BASE_DIR = os.path.dirname(sys.executable)
+FILEPATH = os.path.join(BASE_DIR, "todos.txt")
 
 def get_todos(filepath=FILEPATH):
     """read a text file and return the list of to-do items

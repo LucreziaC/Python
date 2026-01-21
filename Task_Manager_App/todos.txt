@@ -1,5 +1,0 @@
-write todo with GUI
-edit 2 todo with gui
-
-add improve gui
-test gui

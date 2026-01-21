@@ -1,6 +1,24 @@
 import functions
 import FreeSimpleGUI as sg
 import time as time
+import os
+import sys
+
+def resource_path(relative_path):
+    """Restituisce il path corretto per PyInstaller --onefile."""
+    try:
+        # se è un exe creato con PyInstaller
+        base_path = sys._MEIPASS
+    except AttributeError:
+        # se è lo script normale
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", 'w') as file:
+        pass
 
 sg.theme("DarkPurple4")
 
@@ -8,7 +26,7 @@ clock = sg.Text("", key='clock')
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip = "Enter todo", key = "todo")
 #add_button = sg.Button("Add")
-add_button=sg.Button(size=10, image_source="assets/add.png", mouseover_colors="LightBlue2", 
+add_button=sg.Button(size=10, image_source=resource_path("assets/add.png"), mouseover_colors="LightBlue2", 
                      tooltip="Add todo", key="Add")
 list_box = sg.Listbox(values=functions.get_todos(), 
                       key="todos",
