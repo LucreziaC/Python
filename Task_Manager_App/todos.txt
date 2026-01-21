@@ -1,0 +1,5 @@
+check
+read
+write
+testcookcookedphone
+vediamo se funge

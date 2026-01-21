@@ -1,8 +1,13 @@
 import os
 import sys
 
-BASE_DIR = os.path.dirname(sys.executable)
-FILEPATH = os.path.join(BASE_DIR, "todos.txt")
+if getattr(sys, 'frozen', False):
+    BASE_DIR = os.path.dirname(sys.executable)
+    FILEPATH = os.path.join(BASE_DIR, "todos.txt")
+else:
+    print("Eseguo da CMD/Terminal")
+    FILEPATH="todos.txt"
+
 
 def get_todos(filepath=FILEPATH):
     """read a text file and return the list of to-do items
