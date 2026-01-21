@@ -1,4 +1,5 @@
 write todo with GUI
 edit 2 todo with gui
-edit new todo
 
+add improve gui
+test gui
