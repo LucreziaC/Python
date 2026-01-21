@@ -1,5 +1,5 @@
 check
 read
-write
-testcookcookedphone
-vediamo se funge
+remove
+control
+lived
